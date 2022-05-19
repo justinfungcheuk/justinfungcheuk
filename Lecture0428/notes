@@ -1,0 +1,96 @@
+function add(x, y){
+    return x + y;
+    
+}
+add(4+2)
+/**
+ * passing phase
+ * x = 4
+ * y = 2
+ * 
+ * excution phase
+ * return x + y;
+ * return = 6
+ * 
+ * stack
+ * call add(4,2) 會被擺到 stack -> 再將 add 轉換為 return =  6
+ */
+
+/**
+ * 
+ * Nested function 
+ * f(a,b) = f(a)f(b)=f(b)f(a)
+ * combinal math 組合數學
+ * 
+ * function outter(a){
+   function inner(b){
+   return (a+b);}
+   return inner;}
+   console.log(outter(2)(3));    
+   //第一步 outter(2) 取代為 inner - heap 裡面會有 a = 2 
+   //第二步 (3) 會被視為 b
+   例子：
+   base = outter(2)
+   large = base(3)
+   small = base(4)
+
+ * 
+   
+ * x = f1(2)
+ * x(3) //3+2
+ * x(4) //4+2
+ * x(5) //5+2
+ * 固定的a值，a只是運行一次
+ * 但有多種的b值
+ * 
+ * 
+ * 如果一個 function(a+b)
+ * 可以將它們拆開 function(a)+function(b)
+ * 
+ * base = function(2) //固定的a值，a只是運行一次
+ * large customer = base(3) + 2  //5 /但有不同的 b值
+ * small customer = base(4) + 2  //6
+ * 
+ * a值即是 primary value - 主值不變
+ * b值即是 second value  - 次值可有不同的值
+ * 
+ */
+
+/**
+ * rest parameter
+ * ... 代表有其他 parameter
+ * ... 只可以使用一個，不可以有多於一個
+ * 
+ * 
+ * default parameter
+ * 
+ * function(x=50)
+ * a() // 將 x=50 插入到 a() 
+ * 
+ */
+
+
+/**
+ * b={}
+ * c= new Object()
+ * 以上兩者的結果是一樣的
+ */
+
+/**
+ * scopes 基於 windows 會 等於1 否則 等於 0，因為它是屬於最底層
+ */
+
+/**
+ * a = []
+ * Array(0) 這個是 array的constructor function
+ * 只要做一個 constructor 就會有 [[Prototype]]: Array(0) 裡面的所有功能
+ * 
+ * 
+ * 大O 是底層的 Object
+ * object是一個地址
+ * variable是一個地址
+ * 
+ * function 和 object 的底層邏輯都是地址
+ * 
+ * 
+ */

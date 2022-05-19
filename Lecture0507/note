@@ -1,0 +1,40 @@
+notes
+//為什麼用 array 儲存起 argument - 可以無限加
+//例子：
+function(a, b, c)
+array = [a, b, c] // push(a)(b)
+
+//call back function
+f(a,f,c)
+f() //加上個括號即可 call back function
+
+/**
+ * 下星期講 5/10
+ * promise()
+ * .then()
+ * .all()
+ * .finally()
+ * 
+ */
+
+// array.reduce()
+[1,2,3].reduce(total, num) => total = total + num
+// call back function 可以連續使用做加數
+
+
+//Promise
+//Promise 完成後，就會返回兩個可能性 - parameter
+let complete = true;
+let finishmeal = new Promise(function (resolve, reject) {
+if (complete) {
+resolve("I finished my meal within 30 minutes");
+} else {
+reject("I did not finish my meal within 30 minutes");
+}
+});
+
+// new 簡易版本
+// link / prototype
+{}
+
+// built in function -> 
